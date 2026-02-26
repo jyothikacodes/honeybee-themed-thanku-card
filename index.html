@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Favorite Human 🐝</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Quicksand', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#fff3b0,#ffd166,#ffb703);
+    overflow:hidden;
+}
+
+/* floating bees */
+
+.bee{
+    position:absolute;
+    font-size:24px;
+    animation: fly 12s linear infinite;
+}
+
+.bee:nth-child(1){
+    top:10%;
+    left:-10%;
+}
+
+.bee:nth-child(2){
+    top:70%;
+    left:-15%;
+    animation-delay:4s;
+}
+
+@keyframes fly{
+    0%{transform:translateX(0)}
+    100%{transform:translateX(120vw)}
+}
+
+/* honeycomb card */
+
+.card{
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    padding:30px;
+    border-radius:25px;
+    width:340px;
+    text-align:center;
+    box-shadow:
+        0 0 20px rgba(255,183,3,0.5),
+        0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* image */
+
+img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+    box-shadow:0 0 15px rgba(255,183,3,0.6);
+}
+
+/* text */
+
+.title{
+    font-size:22px;
+    font-weight:600;
+    color:#5a3d00;
+}
+
+.text{
+    font-size:15px;
+    margin-top:10px;
+    color:#4a3200;
+}
+
+/* button */
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background: linear-gradient(135deg,#ffb703,#fb8500);
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px rgba(251,133,0,0.8);
+}
+
+/* hidden message */
+
+.hidden{
+    opacity:0;
+    transition:0.6s;
+    margin-top:15px;
+    color:#3a2600;
+}
+
+.show{
+    opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bee">🐝</div>
+<div class="bee">🐝</div>
+
+<div class="card">
+
+<img src="honey.48">
+
+<div class="title">
+THANK YOUU <3 
+</div>
+
+<div class="text">
+Nanni.. nani.. nanni.. Veendum nannii
+Hridayathinte bhashayil nanni 😭🩷
+</div>
+
+<button onclick="reveal()">tap here</button>
+
+<div id="message" class="hidden">
+Thank you for being one of the kindest souls in my life. 🐝
+</div>
+
+</div>
+
+<script>
+
+function reveal(){
+    document.getElementById("message").classList.add("show")
+}
+
+</script>
+
+</body>
+</html>
